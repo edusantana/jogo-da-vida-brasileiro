@@ -1,7 +1,7 @@
 CFLAGS=-Wall -g -std=c1x
 
-all: jdvb
+all: jdvb jdvb_test
 
 clean:
-	rm -rf jdvb
+	rm -rf jdvb jdvb_test
 
