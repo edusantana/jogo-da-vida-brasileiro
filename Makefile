@@ -1,14 +1,16 @@
 CC=gcc
 CFLAGS=-Wall -g -std=c1x
 
-all: jdvb jdvb_test
+all: jdvb_test tabuleiro_test
 
-jdvb_test: jdvb_test.c jogo.c
-	$(CC) $(CFLAGS) jdvb_test.c jogo.c -o jdvb_test
+tabuleiro_test: tabuleiro_test.c tabuleiro.c
+	$(CC) $(CFLAGS) tabuleiro_test.c tabuleiro.c -o tabuleiro_test
+	./tabuleiro_test
 
-jogo.o: jogo.c jogo.h
-	$(CC) $(CFLAGS) -c jogo.c
+jdvb_test: jdvb_test.c jogo.c tabuleiro.c
+	$(CC) $(CFLAGS) jdvb_test.c jogo.c tabuleiro.c -o jdvb_test
+	./jdvb_test
 
 clean:
-	rm -rf jdvb jdvb_test jogo.o jdvb.o
+	rm -rf jdvb_test tabuleiro_test
 

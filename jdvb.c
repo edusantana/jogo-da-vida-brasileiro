@@ -32,7 +32,21 @@ int processa_argumentos(int argc, char* argv[]){
 }
 
 void inicializa_jogo(){
+  int quantidade_de_jogadores = ler_quantidade_de_jogadores();
+  cria_jogadores(quantidade_de_jogadores);
 }
+
+
+int quantidade_de_jogadores = -1;
+
+void cria_jogadores(int quantidade){
+  quantidade_de_jogadores = quantidade;
+}
+
+int ler_quantidade_de_jogadores(){
+  return 0;
+}
+
 void termina_jogo(){
 }
 void processa_entradas_do_usuario(){

@@ -8,3 +8,4 @@ void processa_entradas_do_usuario();
 void atualiza_mundo_do_jogo();
 void renderiza_mundo_do_jogo();
 
+
