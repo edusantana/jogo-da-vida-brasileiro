@@ -14,3 +14,6 @@ Tabuleiro* get_tabuleiro(){
   return tabuleiro;
 }
 
+void cria_casas(Tabuleiro* t){
+
+}

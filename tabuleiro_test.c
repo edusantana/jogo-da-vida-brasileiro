@@ -21,7 +21,19 @@ static void test_cria_tabuleiro(void){
 
 }
 
+static void test_cria_casas(){
+  Tabuleiro t;
+  t.casas[0] = NULL;
+  
+  cria_casas(&t);
+  
+  assert(t.casas[0] != NULL
+    && "test_cria_casas");
+
+}
+
 int main() {
   test_cria_tabuleiro();
+  test_cria_casas();
 }
 
