@@ -1,8 +1,17 @@
 
 typedef struct {
 	// Declarações dos campos
+} Rodada;
+
+
+typedef struct {
+	// Declarações dos campos
+//	(void*) (casas[2]);
 } Tabuleiro;
 
-void cria_tabuleiro();
+typedef void Casas_Creator();
+
+// passa função de criação de casas
+void cria_tabuleiro(Casas_Creator*);
 Tabuleiro* get_tabuleiro();
 
