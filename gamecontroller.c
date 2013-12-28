@@ -43,3 +43,12 @@ char* getNome(int jogador){
 DoencaHereditaria getDH(int jogador){
   return   jogadores[jogador].dh;
 }
+
+void setRoleta(int roleta){
+
+}
+void moveJogador(bool executaAcaoDaCasa){
+
+}
+
+

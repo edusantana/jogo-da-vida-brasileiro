@@ -32,7 +32,6 @@ static void verifica_estado_inicial_do_jogo(){
   
   assert(jogadorDaVez() == 0
     && "Jogador 0 é o primeiro");
-
 }
 
 void verifica_nascimento(int jogador, char* nome, DoencaHereditaria dh){
@@ -40,6 +39,12 @@ void verifica_nascimento(int jogador, char* nome, DoencaHereditaria dh){
     "Doença foi registrada");
   assert(strcmp(nome, getNome(jogador)) == 0 &&
     "Nome do jogador foi registrado");
+
+}
+
+void verificaJogadorNaCasa(int jogador, int posicao){
+    assert(jogador_posicao(jogador) == posicao && 
+      "Jogador andou");
 
 }
 
@@ -59,6 +64,19 @@ static void test_prepara_jogo(void){
   verifica_nascimento(0, "João", NenhumaDoenca);
   verifica_nascimento(1, "Maria", Hipertensao);
   verifica_nascimento(2, "Roberto", Diabetes);
+
+  bool executaAcaoDaCasa = false;
+  setRoleta(3);
+  moveJogador(executaAcaoDaCasa);
+  setRoleta(2);
+  moveJogador(executaAcaoDaCasa);
+  setRoleta(1);
+  moveJogador(executaAcaoDaCasa);
+
+  verificaJogadorNaCasa(0, 3);
+  verificaJogadorNaCasa(1, 2);
+  verificaJogadorNaCasa(2, 1);
+
 
   tearDown();
 }

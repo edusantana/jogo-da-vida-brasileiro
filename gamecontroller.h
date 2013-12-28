@@ -1,6 +1,8 @@
 #ifndef GAMECONTROLLER
 #define GAMECONTROLLER
 
+#include <stdbool.h>
+
 typedef enum doencas_hereditarias{
   NenhumaDoenca,
   Hipertensao,
@@ -22,5 +24,8 @@ int jogadorDaVez();
 void nascimento(int jogador, char* nome, DoencaHereditaria dh);
 char* getNome(int jogador);
 DoencaHereditaria getDH(int jogador);
+
+void setRoleta(int roleta);
+void moveJogador(bool executaAcaoDaCasa);
 
 #endif /* GAMECONTROLLER */
