@@ -1,10 +1,6 @@
 #ifndef GAMECONTROLLER
 #define GAMECONTROLLER
 
-typedef struct _Jogador{
-  int posicao;
-} Jogador;
-
 typedef enum doencas_hereditarias{
   NenhumaDoenca,
   Hipertensao,

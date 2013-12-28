@@ -1,13 +1,21 @@
 #include "gamecontroller.h"
 #include <stdlib.h>
 
+struct Jogador {
+  int posicao;
+  char* nome;
+};
 
 static struct Jogador *jogadores;
 static int jogadores_qtde = 0;
 
+int jogadores_quantidade(){
+  return jogadores_qtde;
+}
+
 void cria_jogadores(int quantidade){
   jogadores_qtde = quantidade;
-  jogadores = calloc(quantidade, sizeof(Jogador));
+  jogadores = calloc(quantidade, sizeof(struct Jogador));
 
 }
 
@@ -19,19 +27,17 @@ void inicializa_jogo(){
   jogador_da_vez = 0;
 }
 
-int jogadores_quantidade(){
-  return jogadores_qtde;
-}
+
 int jogador_posicao(int jogador){
   return 0;
 }
 
 void nascimento(int jogador, char* nome,
   DoencaHereditaria dh){
-
+  jogadores[jogador].nome = nome;
 }
 char* getNome(int jogador){
-  return NULL;
+  return   jogadores[jogador].nome;
 }
 DoencaHereditaria getDH(int jogador){
   return NenhumaDoenca;
