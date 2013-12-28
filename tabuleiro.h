@@ -1,3 +1,6 @@
+#ifndef TABULEIRO
+#define TABULEIRO
+
 typedef struct {
 } Tabuleiro;
 
@@ -7,3 +10,5 @@ Tabuleiro* get_tabuleiro();
 
 void detroy_tabuleiro();
 int get_casas_quantidade();
+
+#endif /* TABULEIRO */
