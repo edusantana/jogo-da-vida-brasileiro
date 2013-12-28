@@ -26,4 +26,13 @@ int jogador_posicao(int jogador){
   return 0;
 }
 
+void nascimento(int jogador, char* nome,
+  DoencaHereditaria dh){
 
+}
+char* getNome(int jogador){
+  return NULL;
+}
+DoencaHereditaria getDH(int jogador){
+  return NenhumaDoenca;
+}

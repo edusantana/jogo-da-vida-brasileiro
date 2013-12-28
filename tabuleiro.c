@@ -14,8 +14,6 @@ Tabuleiro* get_tabuleiro(){
 }
 
 
-
-
 static int casas_quantidade = 0;
 
 int get_casas_quantidade(){

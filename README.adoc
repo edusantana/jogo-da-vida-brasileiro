@@ -1,0 +1,40 @@
+= jogo-da-vida
+
+Jogo da Vida, very simple game in c for console.
+
+=== Visão geral
+
+* Será um misto de competitivo e cooperativo.
+* O jogo deve representar a vida mas no sentido mais amplo.
+* O jogador irá envelhecendo ao decorrer do jogo, simulando a vida.
+* Ao nascer o jogador terá pré-disposição a algumas doenças, podendo
+  piorar seus estado com base nas suas atividades. Exemplo: Um
+  diabético pode sofrer algum problema na Páscoa.
+* As profissões existirão, pois são um importante aspecto das nossas
+  vidas, no entanto, não terá um significado financeiro. Um médico
+  terá as mesmas chances de um professor durante o jogo.
+* O jogador poderá casar, ter filhos, separar e casar novamente.
+* Os jogadores poderão entrar em depressão, precisando da ajuda dos
+  demais para se restabelecer. Os demais poderão ajudá-lo, mas
+  perderão um jogada no auxílio. A recompensa do auxílio não deverá
+  ser imediata, mas a longo prazo.
+* O jogador estará trabalhando ao decorrer do jogo, podendo perder seu
+  emprego e mudar de profissão.
+* O final do tabuleiro representa a morte, pois todos iremos morrer
+  um dia, mas o importante é o que fazemos enquanto estamos vivos.
+* Para demonstrar que a morte pode chegar antes, pode acontecer
+  acidentes ou doenças se agravarem, causando a morte do jogador.
+  Neste caso, ele continua jogando como um fantasma.
+* Fatos relevantes serão registrados durante o jogo, ao final, o
+  vencedor será aquele com melhor desempenho.
+  
+== Etapas
+
+=== Nascimento
+
+No início do jogo, os jogadores irão nascer.
+
+Durante o ((nascimento)), cada jogador poderá ter uma ((predisposição))
+genética a uma ((doença)) fatal.
+
+
