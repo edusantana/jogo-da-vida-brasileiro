@@ -28,6 +28,10 @@ static void verifica_estado_inicial_jogadores(){
     assert(jogador_posicao(i) == 0 && 
       "Jogadores estão na posição inicial");
   }
+  
+  assert(jogadorDaVez() == 0
+    && "Jogador 0 é o primeiro");
+
 }
 
 static void test_prepara_jogo(void){

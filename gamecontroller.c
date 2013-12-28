@@ -10,8 +10,13 @@ void cria_jogadores(int quantidade){
   jogadores = calloc(quantidade, sizeof(Jogador));
 
 }
-void inicializa_jogo(){
 
+static int jogador_da_vez = -1;
+int jogadorDaVez(){
+  return jogador_da_vez;
+}
+void inicializa_jogo(){
+  jogador_da_vez = 0;
 }
 
 int jogadores_quantidade(){
@@ -20,3 +25,5 @@ int jogadores_quantidade(){
 int jogador_posicao(int jogador){
   return 0;
 }
+
+
