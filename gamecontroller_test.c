@@ -38,7 +38,7 @@ static void verifica_estado_inicial_do_jogo(){
 void verifica_nascimento(int jogador, char* nome, DoencaHereditaria dh){
   assert(getDH(jogador) == dh &&
     "Doença foi registrada");
-  assert(strcmp(nome, getNome(jogador)) &&
+  assert(strcmp(nome, getNome(jogador)) == 0 &&
     "Nome do jogador foi registrado");
 
 }

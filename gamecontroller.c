@@ -4,6 +4,7 @@
 struct Jogador {
   int posicao;
   char* nome;
+  DoencaHereditaria dh;
 };
 
 static struct Jogador *jogadores;
@@ -27,7 +28,6 @@ void inicializa_jogo(){
   jogador_da_vez = 0;
 }
 
-
 int jogador_posicao(int jogador){
   return 0;
 }
@@ -35,10 +35,11 @@ int jogador_posicao(int jogador){
 void nascimento(int jogador, char* nome,
   DoencaHereditaria dh){
   jogadores[jogador].nome = nome;
+  jogadores[jogador].dh = dh;
 }
 char* getNome(int jogador){
   return   jogadores[jogador].nome;
 }
 DoencaHereditaria getDH(int jogador){
-  return NenhumaDoenca;
+  return   jogadores[jogador].dh;
 }
