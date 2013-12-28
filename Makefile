@@ -3,6 +3,8 @@ CFLAGS=-Wall -g -std=c1x
 
 all: jdvb_test tabuleiro_test
 
+gamecontroller_test: gamecontroller_test.c gamecontroller.c tabuleiro.c
+
 tabuleiro_test: tabuleiro_test.c tabuleiro.c
 	$(CC) $(CFLAGS) tabuleiro_test.c tabuleiro.c -o tabuleiro_test
 	./tabuleiro_test
