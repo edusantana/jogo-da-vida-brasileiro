@@ -14,6 +14,11 @@ static void tearDown(){
   detroy_tabuleiro();
 }
 
+static void verifica_pre_condicao(){
+  assert(get_tabuleiro() == NULL
+    && "test_cria_tabuleiro / tabuleiro inicia null");
+}
+
 static void verifica_estado_inicial_jogadores(){
   assert(jogadores_quantidade() == QUANTIDADE_JOGADORES 
     && "Jogadores criados com sucesso");
@@ -26,8 +31,7 @@ static void verifica_estado_inicial_jogadores(){
 }
 
 static void test_prepara_jogo(void){
-  assert(get_tabuleiro() == NULL
-    && "test_cria_tabuleiro / tabuleiro inicia null");
+  verifica_pre_condicao();
   
   cria_tabuleiro();
   cria_jogadores(3);
@@ -36,7 +40,6 @@ static void test_prepara_jogo(void){
   verifica_estado_inicial_jogadores();
 
   tearDown();
-
 }
 
 
