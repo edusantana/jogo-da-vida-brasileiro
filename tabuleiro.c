@@ -4,16 +4,19 @@
 
 static Tabuleiro* tabuleiro = NULL;
 
-void cria_tabuleiro(Casas_Creator* f){
+void cria_tabuleiro(){
   tabuleiro = NULL;
   tabuleiro = malloc(sizeof (Tabuleiro));
-  f();
 }
 
 Tabuleiro* get_tabuleiro(){
   return tabuleiro;
 }
 
-void cria_casas(Tabuleiro* t){
 
+void detroy_tabuleiro(){
+  if (tabuleiro != NULL){
+    free (tabuleiro);
+    tabuleiro = NULL;
+  }
 }
