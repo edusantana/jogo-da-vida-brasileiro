@@ -20,3 +20,9 @@ void detroy_tabuleiro(){
     tabuleiro = NULL;
   }
 }
+
+static int casas_quantidade = 0;
+
+int get_casas_quantidade(){
+  return casas_quantidade;
+}
