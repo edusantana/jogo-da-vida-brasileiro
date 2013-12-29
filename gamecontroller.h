@@ -25,6 +25,8 @@ typedef enum estado_emotivo {
 
 void cria_jogadores(int quantidade);
 void inicializa_jogo();
+// Inicializa jogadores
+void inicializa_jogadores(bool usandoTabuleiro);
 
 int jogadores_quantidade();
 int jogador_posicao(int jogador);
@@ -37,5 +39,12 @@ DoencaHereditaria getDH(int jogador);
 
 void setRoleta(int roleta);
 void moveJogador(bool executaAcaoDaCasa);
+
+Emocao jogador_emocao(int jogador);
+// Emoção do Jogador da vez
+Emocao emocaoAtual();
+
+void incrementaEmocao();
+void decrementaEmocao();
 
 #endif /* GAMECONTROLLER */

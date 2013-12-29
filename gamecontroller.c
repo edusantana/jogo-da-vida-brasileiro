@@ -35,6 +35,10 @@ void inicializa_jogo(){
   jogador_da_vez = 0;
 }
 
+void inicializa_jogadores(bool usandoTabuleiro){
+}
+
+
 int jogador_posicao(int jogador){
   return jogadores[jogador].posicao;
 }
@@ -61,4 +65,15 @@ void moveJogador(bool executaAcaoDaCasa){
   proximoJogador();
 }
 
+Emocao jogador_emocao(int jogador){
+  return Depressao;
+}
+Emocao emocaoAtual(){
+}
 
+void incrementaEmocao(){
+
+}
+void decrementaEmocao(){
+
+}
