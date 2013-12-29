@@ -1,6 +1,5 @@
 #include "gamecontroller.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 struct Jogador {
   int posicao;
@@ -37,7 +36,7 @@ void inicializa_jogo(){
 }
 
 int jogador_posicao(int jogador){
-  return 0;
+  return jogadores[jogador].posicao;
 }
 
 void nascimento(int jogador, char* nome,

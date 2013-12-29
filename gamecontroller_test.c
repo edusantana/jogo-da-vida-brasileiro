@@ -44,10 +44,8 @@ void verifica_nascimento(int jogador, char* nome, DoencaHereditaria dh){
 }
 
 void verificaJogadorNaCasa(int jogador, int posicao){
-  printf("J %d P %d JP %d", jogador, posicao, jogador_posicao(jogador));
     assert(jogador_posicao(jogador) == posicao && 
       "Jogador andou");
-
 }
 
 static void test_prepara_jogo(void){
