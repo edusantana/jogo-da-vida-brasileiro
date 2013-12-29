@@ -7,6 +7,7 @@
 #include <assert.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 
 
 static int QUANTIDADE_JOGADORES = 3;
@@ -43,6 +44,7 @@ void verifica_nascimento(int jogador, char* nome, DoencaHereditaria dh){
 }
 
 void verificaJogadorNaCasa(int jogador, int posicao){
+  printf("J %d P %d JP %d", jogador, posicao, jogador_posicao(jogador));
     assert(jogador_posicao(jogador) == posicao && 
       "Jogador andou");
 

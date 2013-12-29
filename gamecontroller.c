@@ -1,5 +1,6 @@
 #include "gamecontroller.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 struct Jogador {
   int posicao;
@@ -24,6 +25,13 @@ static int jogador_da_vez = -1;
 int jogadorDaVez(){
   return jogador_da_vez;
 }
+
+void proximoJogador(){
+  jogador_da_vez++;
+  jogador_da_vez%=jogadores_quantidade();
+  
+}
+
 void inicializa_jogo(){
   jogador_da_vez = 0;
 }
@@ -44,11 +52,14 @@ DoencaHereditaria getDH(int jogador){
   return   jogadores[jogador].dh;
 }
 
-void setRoleta(int roleta){
-
+static int roleta=-1;
+void setRoleta(int roletaValor){
+  roleta = roletaValor;
 }
-void moveJogador(bool executaAcaoDaCasa){
 
+void moveJogador(bool executaAcaoDaCasa){
+  jogadores[jogadorDaVez()].posicao += roleta;
+  proximoJogador();
 }
 
 

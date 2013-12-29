@@ -5,7 +5,7 @@ all: jdvb_test tabuleiro_test
 
 gamecontroller_test: gamecontroller_test.c gamecontroller.c tabuleiro.c
 	$(CC) $(CFLAGS) gamecontroller_test.c gamecontroller.c tabuleiro.c -o gamecontroller_test
-	./gamecontroller_test
+#	ddd ./gamecontroller_test
 
 tabuleiro_test: tabuleiro_test.c tabuleiro.c
 	$(CC) $(CFLAGS) tabuleiro_test.c tabuleiro.c -o tabuleiro_test
