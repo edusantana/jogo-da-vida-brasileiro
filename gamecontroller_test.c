@@ -77,7 +77,6 @@ static void test_prepara_jogo(void){
   verificaJogadorNaCasa(1, 2);
   verificaJogadorNaCasa(2, 1);
 
-
   tearDown();
 }
 

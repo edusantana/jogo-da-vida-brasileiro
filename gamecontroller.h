@@ -11,6 +11,16 @@ typedef enum doencas_hereditarias{
   Cancer
 } DoencaHereditaria;
 
+typedef enum estado_emotivo {
+  Depressao,
+  Raiva,
+  Preocupacao,
+  Irritacao,
+  Esperanca,
+  Felicidade,
+  Paixao,
+  Amor
+} Emocao;
 
 
 void cria_jogadores(int quantidade);

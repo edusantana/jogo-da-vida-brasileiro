@@ -3,6 +3,11 @@ CFLAGS=-Wall -g -std=c1x
 
 all: jdvb_test tabuleiro_test
 
+emocao_test: emocao_test.c gamecontroller.c tabuleiro.c
+	$(CC) $(CFLAGS) emocao_test.c gamecontroller.c tabuleiro.c -o emocao_test
+	./emocao_test
+
+
 gamecontroller_test: gamecontroller_test.c gamecontroller.c tabuleiro.c
 	$(CC) $(CFLAGS) gamecontroller_test.c gamecontroller.c tabuleiro.c -o gamecontroller_test
 	./gamecontroller_test
@@ -16,5 +21,5 @@ jdvb_test: jdvb_test.c jogo.c tabuleiro.c
 	./jdvb_test
 
 clean:
-	rm -rf jdvb_test tabuleiro_test gamecontroller_test
+	rm -rf jdvb_test tabuleiro_test gamecontroller_test emocao_test
 

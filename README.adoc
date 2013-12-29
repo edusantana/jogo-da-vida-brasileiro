@@ -28,6 +28,16 @@ Jogo da Vida, very simple game in c for console.
 * Fatos relevantes serão registrados durante o jogo, ao final, o
   vencedor será aquele com melhor desempenho.
   
+
+== Jogador
+
+Nome:: Nome do Jogador.
+Doença Hereditaria:: Predisposição genética para esta doença.
+Emoção:: Descreve a emoção predominante do jogador no jogo. Seu estado emocional irá variar ao decorrer do jogo.
+Pontos de Moral:: Quando o jogador realizar boas ações será recompensado com pontos de moral.
+Pontos de Inteligência:: Muitas atividades irão desenvolver a inteligência do jogador.
+
+
 == Etapas
 
 === Nascimento
@@ -37,4 +47,14 @@ No início do jogo, os jogadores irão nascer.
 Durante o ((nascimento)), cada jogador poderá ter uma ((predisposição))
 genética a uma ((doença)) fatal.
 
+=== Trabalho
+
+Na primeira rodada os jogadores irão definir o seu trabalho. 
+
+=== Status do Jogador
+
+
+Emoção:: Varia entre: 
+Inteligência:: 
+Humor::
 
