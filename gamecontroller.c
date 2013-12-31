@@ -38,6 +38,8 @@ void inicializa_jogo(){
 
 
 void inicializa_jogadores(bool usandoTabuleiro){
+  jogador_da_vez = 0;
+
   for (int jogador=0; jogador < jogadores_quantidade();
      jogador++){
     // definindo emoção inicial
