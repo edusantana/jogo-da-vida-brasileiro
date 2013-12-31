@@ -1,12 +1,10 @@
 CC=gcc
 CFLAGS=-Wall -g -std=c1x
 
-all: jdvb_test tabuleiro_test
+all: jdvb_test tabuleiro_test gamecontroller_test emocao_test
 
 emocao_test: emocao_test.c gamecontroller.c tabuleiro.c
 	$(CC) $(CFLAGS) emocao_test.c gamecontroller.c tabuleiro.c -o emocao_test
-	./emocao_test
-
 
 gamecontroller_test: gamecontroller_test.c gamecontroller.c tabuleiro.c
 	$(CC) $(CFLAGS) gamecontroller_test.c gamecontroller.c tabuleiro.c -o gamecontroller_test

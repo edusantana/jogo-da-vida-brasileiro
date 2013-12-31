@@ -5,6 +5,7 @@ struct Jogador {
   int posicao;
   char* nome;
   DoencaHereditaria dh;
+  Emocao emocao;
 };
 
 static struct Jogador *jogadores;
@@ -35,7 +36,13 @@ void inicializa_jogo(){
   jogador_da_vez = 0;
 }
 
+
 void inicializa_jogadores(bool usandoTabuleiro){
+  for (int jogador=0; jogador < jogadores_quantidade();
+     jogador++){
+    // definindo emoção inicial
+    jogadores[jogador].emocao = Esperanca;
+  }
 }
 
 
@@ -66,14 +73,70 @@ void moveJogador(bool executaAcaoDaCasa){
 }
 
 Emocao jogador_emocao(int jogador){
-  return Depressao;
+  return jogadores[jogador].emocao;
 }
+
 Emocao emocaoAtual(){
+  return jogador_emocao(jogadorDaVez());
 }
 
 void incrementaEmocao(){
-
+  Emocao novaEmocao;
+  switch (emocaoAtual()){
+    case  Depressao:
+      novaEmocao = Raiva;
+      break;
+    case  Raiva:
+      novaEmocao = Preocupacao;
+      break;
+    case  Preocupacao:
+      novaEmocao = Irritacao;
+      break;
+    case  Irritacao:
+      novaEmocao = Esperanca;
+      break;
+    case  Esperanca:
+      novaEmocao = Felicidade;
+      break;
+    case  Felicidade:
+      novaEmocao = Paixao;
+      break;
+    case  Paixao:
+      novaEmocao = Amor;
+      break;
+    case  Amor:
+      novaEmocao = Amor;
+    break;
+  }
+  jogadores[jogadorDaVez()].emocao = novaEmocao;
 }
 void decrementaEmocao(){
-
+  Emocao novaEmocao;
+  switch (emocaoAtual()){
+    case  Depressao:
+      novaEmocao = Depressao;
+      break;
+    case  Raiva:
+      novaEmocao = Depressao;
+      break;
+    case  Preocupacao:
+      novaEmocao = Raiva;
+      break;
+    case  Irritacao:
+      novaEmocao = Preocupacao;
+      break;
+    case  Esperanca:
+      novaEmocao = Irritacao;
+      break;
+    case  Felicidade:
+      novaEmocao = Esperanca;
+      break;
+    case  Paixao:
+      novaEmocao = Felicidade;
+      break;
+    case  Amor:
+      novaEmocao = Paixao;
+    break;
+  }
+  jogadores[jogadorDaVez()].emocao = novaEmocao;
 }
